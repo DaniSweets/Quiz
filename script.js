@@ -1,4 +1,5 @@
 const highScoreButton = document.getElementById("highScoreButton");
+const startButton = document.getElementById("startButton");
 const quizContainer = document.getElementById("quizContainer");
 const questionContainer = document.getElementById("questionContainer");
 const question = document.getElementById("question");
@@ -70,7 +71,24 @@ const questions = [
     },
 ];
 
+startButton.addEventListener("click", begin);
 
+function begin() {
+    gameStart.style.display = "none";
+    score=0;
+    showQuestion();
+    startTimer();
+}
+
+function showQuestion() { 
+    for (let i = 0; i < questions.length; i++) {
+    const currentQuestion = questions[i];
+    question.textContent = currentQuestion.question;
+
+    for (let b = 0; b < options.length; b++) {
+        choiceButton[b].textContent = currentQuestion.options[b];
+          }
+    }}
 
 
 //sets game timer

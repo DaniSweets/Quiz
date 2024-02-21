@@ -8,18 +8,19 @@
     <title>Js Quiz</title>
 </head>
 <body>
-    <nav>
+    <nav class="navbar">
         <button class="button" id="highScoreButton">View High Scores</button>
-        <h1 class="title">Time Remaining: <span class="">10</span></h1>
+        <!-- <h1 class="title">Time Remaining: <span class="">10</span></h1> -->
+        <button class="button" id="startButton">Start Quiz</button>
     </nav>
     <main class= "quizContainer">
         <section id="questionContainer">
-        <h3 id="question"></h3>
+        <h3 class="title" id="question"></h3>
          <article id="answerContainer">
-            <button class="choice"></button>
-            <button class="choice"></button>
-            <button class="choice"></button>
-            <button class="choice"></button>
+            <button class="choice button"></button>
+            <button class="choice button"></button>
+            <button class="choice button"></button>
+            <button class="choice button"></button>
          </article>
         </section>
         <div id="currentScore"></div>
